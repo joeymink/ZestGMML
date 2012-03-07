@@ -6,6 +6,7 @@
       <view
             category="org.eclipse.zest"
             class="com.github.walknwind.xgmml.XgmmlView"
+            icon="icons/noun_project_1056.png"
             id="com.github.walknwind.xgmml.XgmmlView"
             name="XGMML Graph"
             restorable="true">
