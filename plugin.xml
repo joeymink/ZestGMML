@@ -24,13 +24,44 @@
          point="org.eclipse.ui.menus">
       <menuContribution
             allPopups="false"
-            locationURI="popup:org.eclipse.ui.popup.any?after=additions">
+            locationURI="popup:org.eclipse.ui.menus.showInMenu">
          <command
                commandId="com.github.walknwind.xgmml.commands.visualize"
-               label="Visualize"
+               label="XGMML Viewer"
                style="push">
+            <visibleWhen
+                  checkEnabled="true">
+               <reference
+                     definitionId="com.github.walknwind.xgmml.definitions.isXgmmlSelected">
+               </reference>
+            </visibleWhen>
          </command>
       </menuContribution>
+   </extension>
+   <extension
+         point="org.eclipse.core.expressions.definitions">
+      <definition
+            id="com.github.walknwind.xgmml.definitions.isXgmmlSelected">
+         <and>
+            <with
+                  variable="selection">
+               <iterate>
+                  <and>
+                     <instanceof
+                           value="org.eclipse.core.resources.IFile">
+                     </instanceof>
+                     <test
+                           property="org.eclipse.core.resources.extension"
+                           value="xgmml">
+                     </test>
+                  </and>
+               </iterate>
+               <count
+                     value="1">
+               </count>
+            </with>
+         </and>
+      </definition>
    </extension>
 
 </plugin>
