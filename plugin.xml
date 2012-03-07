@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.views">
+      <view
+            category="org.eclipse.zest"
+            class="com.github.walknwind.xgmml.XgmmlView"
+            id="com.github.walknwind.xgmml.XgmmlView"
+            name="XGMML Graph"
+            restorable="true">
+      </view>
+   </extension>
+   <extension
+         point="org.eclipse.ui.commands">
+      <command
+            defaultHandler="com.github.walknwind.xgmml.VisualizeCommandHandler"
+            description="Display XGMML in a graph view"
+            id="com.github.walknwind.xgmml.commands.visualize"
+            name="Visualize XGMML">
+      </command>
+   </extension>
+   <extension
+         point="org.eclipse.ui.menus">
+      <menuContribution
+            allPopups="false"
+            locationURI="popup:org.eclipse.ui.popup.any?after=additions">
+         <command
+               commandId="com.github.walknwind.xgmml.commands.visualize"
+               label="Visualize"
+               style="push">
+         </command>
+      </menuContribution>
+   </extension>
+
+</plugin>

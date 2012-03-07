@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+	xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.github.walknwind</groupId>
+	<artifactId>xgmml</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>pom</packaging>
+
+	<properties>
+		<tycho-version>0.12.0</tycho-version>
+	</properties>
+
+	<repositories>
+		<repository>
+			<id>indigo</id>
+			<url>http://download.eclipse.org/releases/indigo</url>
+			<layout>p2</layout>
+		</repository>
+	</repositories>
+
+<!--
+	<pluginRepositories> 
+		<pluginRepository> 
+			<id>sonatype-staging</id> 
+			<url>https://repository.sonatype.org/content/repositories/sonatype_org-002/</url>
+		</pluginRepository>
+	</pluginRepositories>
+-->
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.eclipse.tycho</groupId>
+				<artifactId>tycho-maven-plugin</artifactId>
+				<version>${tycho-version}</version>
+				<extensions>true</extensions>
+			</plugin>
+			<plugin>
+				<groupId>org.eclipse.tycho</groupId>
+				<artifactId>target-platform-configuration</artifactId>
+				<version>${tycho-version}</version>
+				<configuration>
+					<resolver>p2</resolver>
+					<!--target> <artifact> <groupId>${project.groupId}</groupId> <artifactId>${project.artifactId}</artifactId> 
+						<version>${project.version}</version> <classifier>TargetFileNameWithoutExtension</classifier> 
+						</artifact> </target -->
+				</configuration>
+			</plugin>
+			
+			<plugin>
+	  			<groupId>org.apache.maven.plugins</groupId>
+	  			<artifactId>maven-dependency-plugin</artifactId>
+  				<executions>
+  					<execution>
+  						<id>copy-bundle-classpath-libs</id>
+  						<phase>validate</phase>
+  						<goals>
+  							<goal>copy</goal>
+  						</goals>
+  						<!-- 
+  							This is where we grab regular-old jar dependencies and stick them
+  							in the lib directory. Note that, unlike the usual Maven dependency
+  							handling, this won't follow transitive dependencies.  This simply
+  							grabs the given artifact from maven, but only the specified artifact.
+  						 -->
+  						<configuration>
+  							<outputDirectory>lib</outputDirectory>
+  							<overWriteReleases>true</overWriteReleases>
+  							<overWriteSnapshots>true</overWriteSnapshots>
+  							<overWriteIfNewer>true</overWriteIfNewer>
+  							<stripVersion>true</stripVersion>
+  							<artifactItems>
+  								<artifactItem>
+	  								<groupId>com.github.walknwind</groupId>
+	  								<artifactId>xg2d</artifactId>
+	  								<version>0.0.1-SNAPSHOT</version>
+  								</artifactItem>
+  							</artifactItems>
+  						</configuration>
+  					</execution>
+  				</executions>
+  		</plugin>
+		</plugins>
+	</build>
+</project>
