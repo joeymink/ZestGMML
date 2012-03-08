@@ -5,6 +5,9 @@
 */.settings/
 */bin/
 
+# Maven artifacts
+*/target/
+
 # Plug-in paths that should not be commited
 xgmml/lib/
 
