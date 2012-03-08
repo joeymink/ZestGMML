@@ -1,8 +1,11 @@
 # Eclipse workspace artifacts
-.classpath
-.project
-.settings/
-bin/
+.metadata/
+*/.classpath
+*/.project
+*/.settings/
+*/bin/
 
 # Plug-in paths that should not be commited
-lib/
+xgmml/lib/
+
+**/.DS_Store

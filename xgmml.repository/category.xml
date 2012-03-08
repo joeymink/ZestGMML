@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <feature url="features/com.github.walknwind.xgmml.feature_1.0.0.qualifier.jar" id="com.github.walknwind.xgmml.feature" version="1.0.0.qualifier">
+      <category name="com.github.walknwind.xgmml"/>
+   </feature>
+   <category-def name="com.github.walknwind.xgmml" label="XGMML">
+      <description>
+         Plug-ins for visualizing XGMML
+      </description>
+   </category-def>
+</site>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="com.github.walknwind.xgmml.feature"
+      label="XGMML"
+      version="1.0.0.qualifier"
+      provider-name="walk_n_wind">
+
+   <copyright>
+      Copyright 2011, U.S. Air Force
+   </copyright>
+
+   <license>
+      See SEAS License Agreement
+   </license>
+
+   <url>
+      <discovery label="Team SEAS" url="http://teamseas.com"/>
+   </url>
+
+   <requires>
+      <import plugin="org.eclipse.ui"/>
+      <import plugin="org.eclipse.core.runtime"/>
+      <import plugin="org.eclipse.zest.dot.ui"/>
+      <import plugin="org.eclipse.core.expressions"/>
+      <import plugin="org.eclipse.core.filesystem"/>
+      <import plugin="org.eclipse.core.resources"/>
+      <import plugin="org.eclipse.ui.ide"/>
+      <import plugin="org.eclipse.zest.core"/>
+   </requires>
+
+   <plugin
+         id="com.github.walknwind.xgmml"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+</feature>
