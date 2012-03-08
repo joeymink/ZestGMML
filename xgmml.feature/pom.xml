@@ -9,7 +9,7 @@
 		<relativePath>../xgmml.parent</relativePath>
 	</parent>
 	<groupId>com.github.walknwind</groupId>
-	<artifactId>xgmml.feature</artifactId>
+	<artifactId>com.github.walknwind.xgmml.feature</artifactId>
 	<version>1.0.0-SNAPSHOT</version>
 	<packaging>eclipse-feature</packaging>
 </project>
