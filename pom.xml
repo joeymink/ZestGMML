@@ -5,8 +5,8 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.github.walknwind</groupId>
 	<artifactId>xgmml</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
-	<packaging>pom</packaging>
+	<version>1.0.0-SNAPSHOT</version>
+	<packaging>eclipse-plugin</packaging>
 
 	<properties>
 		<tycho-version>0.12.0</tycho-version>
@@ -16,6 +16,11 @@
 		<repository>
 			<id>indigo</id>
 			<url>http://download.eclipse.org/releases/indigo</url>
+			<layout>p2</layout>
+		</repository>
+		<repository>
+			<id>zest</id>
+			<url>https://hudson.eclipse.org/hudson/job/gef-zest-integration/lastSuccessfulBuild/artifact/targetPlatform/</url>
 			<layout>p2</layout>
 		</repository>
 	</repositories>
