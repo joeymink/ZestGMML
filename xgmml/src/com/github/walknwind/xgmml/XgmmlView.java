@@ -188,13 +188,9 @@ public final class XgmmlView extends ViewPart {
 			xg2d.convert(file.getContents());
 			return tempOutputStream.toString("UTF-8");
 		} catch (CoreException e) {
-			// TODO Handle this better
-			e.printStackTrace();
-			return null;
+			throw new RuntimeException(e);
 		} catch (UnsupportedEncodingException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-			return null;
+			throw new RuntimeException(e);
 		}
 	}
 
