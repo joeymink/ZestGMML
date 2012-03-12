@@ -185,6 +185,7 @@ public final class XgmmlView extends ViewPart {
 		try {
 			ByteArrayOutputStream tempOutputStream = new ByteArrayOutputStream(); 
 			XgmmlConverter xg2d = new XgmmlConverter(tempOutputStream);
+			file.refreshLocal(IResource.DEPTH_ZERO, null);	// Ensure the resource is up-to-date
 			xg2d.convert(file.getContents());
 			return tempOutputStream.toString("UTF-8");
 		} catch (CoreException e) {
