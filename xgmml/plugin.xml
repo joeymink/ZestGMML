@@ -28,6 +28,7 @@
             locationURI="popup:org.eclipse.ui.menus.showInMenu">
          <command
                commandId="com.github.walknwind.xgmml.commands.visualize"
+               icon="icons/noun_project_1056.png"
                label="XGMML Viewer"
                style="push">
             <visibleWhen
