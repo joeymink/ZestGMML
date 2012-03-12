@@ -5,6 +5,10 @@
       version="1.0.0.qualifier"
       provider-name="walk_n_wind">
 
+   <description>
+      Contributes a Zest-based XGMML viewer.
+   </description>
+
    <requires>
       <import plugin="org.eclipse.ui"/>
       <import plugin="org.eclipse.core.runtime"/>
